@@ -33,6 +33,7 @@ Presentar los productos de la tienda, mostrar opiniones de clientes y ofrecer un
 ## Sitio publicado
 
 - Repositorio: `https://github.com/lrodriguezvergara/pre-entrega-talento-tech`
+- GitHub Pages: `https://lrodriguezvergara.github.io/pre-entrega-talento-tech/#inicio`
 
 ## Autor
 
