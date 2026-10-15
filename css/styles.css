@@ -1,0 +1,408 @@
+/* =========================================
+   NexoTech - Pre-Entrega Talento Tech
+   ========================================= */
+
+/* ---------- Variables y reset ---------- */
+:root {
+  --color-primario: #0f766e;
+  --color-primario-oscuro: #134e4a;
+  --color-acento: #f59e0b;
+  --color-fondo: #f8fafc;
+  --color-superficie: #ffffff;
+  --color-texto: #1e293b;
+  --color-texto-suave: #64748b;
+  --fuente-titulos: "Space Grotesk", sans-serif;
+  --fuente-texto: "Inter", sans-serif;
+  --radio: 12px;
+  --sombra: 0 4px 14px rgba(15, 23, 42, 0.08);
+}
+/* ------------ Reset -------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fuente-texto);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3 {
+  font-family: var(--fuente-titulos);
+  line-height: 1.2;
+}
+
+/* ---------- Header ---------- */
+.header {
+  position: sticky; 
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(90deg, var(--color-primario-oscuro), var(--color-primario));
+  box-shadow: var(--sombra);
+}
+
+.header__contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--fuente-titulos);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* ---------- Navegación ---------- */
+.nav__lista {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.nav__lista a {
+  display: block;
+  padding: 0.4rem 0.8rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 999px;
+  transition: background-color 0.2s;
+}
+
+.nav__lista a:hover,
+.nav__lista a:focus-visible {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+/* ---------- Secciones generales ---------- */
+main section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+main h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--color-primario-oscuro);
+}
+
+.seccion__intro {
+  text-align: center;
+  color: var(--color-texto-suave);
+  margin: 0.5rem 0 2rem;
+}
+
+.boton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-acento);
+  color: var(--color-texto);
+  font-weight: 600;
+  font-family: inherit;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radio);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.boton:hover {
+  transform: translateY(-2px);
+}
+
+/* ---------- Hero (background con degradado) ---------- */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+main .hero {
+  max-width: none;
+  background: radial-gradient(circle at top right, #ccfbf1, var(--color-fondo) 60%);
+}
+
+.hero__texto {
+  flex: 1 1 320px;
+  max-width: 520px;
+}
+
+.hero__texto h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.hero__texto strong {
+  color: var(--color-primario);
+}
+
+.hero__texto p {
+  margin-bottom: 1.5rem;
+  color: var(--color-texto-suave);
+}
+
+.hero__imagen {
+  flex: 1 1 280px;
+  min-width: 0;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+}
+
+/* ---------- Productos (Flexbox) ---------- */
+.productos__contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.card {
+  flex: 1 1 230px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-superficie);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  background-color: #e2e8f0;
+}
+
+.card__cuerpo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+.card__cuerpo p {
+  color: var(--color-texto-suave);
+  font-size: 0.95rem;
+}
+
+.card__cuerpo .card__precio {
+  margin-top: auto;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--color-primario);
+}
+
+/* ---------- Reseñas (Grid) ---------- */
+main .resenas {
+  max-width: none;
+  background-color: #ecfeff;
+}
+
+.resenas__grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.resena {
+  background-color: var(--color-superficie);
+  padding: 1.5rem;
+  border-radius: var(--radio);
+  border-left: 4px solid var(--color-primario);
+  box-shadow: var(--sombra);
+}
+
+.resena__estrellas {
+  color: var(--color-acento);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.resena p {
+  margin-bottom: 0.8rem;
+}
+
+.resena h3 {
+  font-size: 1rem;
+  color: var(--color-primario-oscuro);
+}
+
+/* Tablet: 2 columnas */
+@media (min-width: 600px) {
+  .resenas__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Escritorio: 3 columnas, la primera reseña destacada ocupa 2 filas */
+@media (min-width: 900px) {
+  .resenas__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .resena:first-child {
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+}
+
+/* ---------- Contacto (Media Queries) ---------- */
+.contacto__contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: var(--color-superficie);
+  padding: 1.5rem;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.formulario label {
+  font-weight: 600;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 0.7rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: 2px solid var(--color-primario);
+  border-color: transparent;
+}
+
+.formulario .boton {
+  align-self: stretch;
+}
+
+.contacto__mapa h3 {
+  margin-bottom: 0.8rem;
+}
+
+.contacto__mapa iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: var(--radio);
+}
+
+/* Tablet en adelante: formulario y mapa lado a lado */
+@media (min-width: 768px) {
+  .contacto__contenedor {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .formulario,
+  .contacto__mapa {
+    flex: 1;
+  }
+
+  .formulario .boton {
+    align-self: flex-start;
+  }
+
+  .contacto__mapa {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacto__mapa iframe {
+    flex-grow: 1;
+    min-height: 320px;
+  }
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background-color: var(--color-primario-oscuro);
+  color: #e2e8f0;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer__redes {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 0.8rem;
+}
+
+.footer__redes a {
+  color: var(--color-acento);
+  text-decoration: none;
+}
+
+.footer__redes a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Móvil: navegación centrada ---------- */
+@media (max-width: 599px) {
+  .header__contenedor {
+    justify-content: center;
+  }
+
+  .nav__lista {
+    justify-content: center;
+  }
+
+  main h2 {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NexoTech: tienda de accesorios y periféricos de computación en Buenos Aires.">
+  <title>NexoTech | Accesorios de computación</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos externa -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" >
+    <div class="header__contenedor">
+      <a href="#inicio" class="logo">
+        <img src="img/logo.svg" alt="Logo de NexoTech" width="40" height="40">
+        <span class="logo">NexoTech</span>
+      </a>
+      
+
+      <!-- ===== NAV ===== -->
+      <nav class="nav"  aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#resenas">Reseñas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio" aria-labelledby="titulo-hero">
+      <div class="hero__texto">
+        <h1 id="titulo-hero">Todo para tu <strong>setup</strong>, en un solo lugar</h1>
+        <p>Teclados, mouse, auriculares y monitores elegidos por gente que trabaja todos los días frente a la computadora.</p>
+        <a href="#productos" class="boton">Ver productos</a>
+      </div>
+      <img class="hero__imagen" src="img/hero.svg" alt="Ilustración de un escritorio con monitor, teclado y mouse" width="480" height="360">
+    </section>
+
+    <!-- Productos (Flexbox) -->
+    <section class="productos" id="productos" aria-labelledby="titulo-productos">
+      <h2 id="titulo-productos">Productos</h2>
+      <p class="seccion__intro">Una selección de los más pedidos del mes.</p>
+
+      <div class="productos__contenedor">
+        <article class="card">
+          <img src="img/teclado.svg" alt="Teclado mecánico con retroiluminación" width="300" height="200">
+          <div class="card__cuerpo">
+            <h3>Teclado mecánico K70</h3>
+            <p>Switches rojos, retroiluminación RGB y formato TKL.</p>
+            <p class="card__precio">$ 85.000</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/mouse.svg" alt="Mouse inalámbrico ergonómico" width="300" height="200">
+          <div class="card__cuerpo">
+            <h3>Mouse inalámbrico M3</h3>
+            <p>Sensor de 16.000 DPI y batería de 70 horas.</p>
+            <p class="card__precio">$ 42.000</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/auriculares.svg" alt="Auriculares over-ear con micrófono" width="300" height="200">
+          <div class="card__cuerpo">
+            <h3>Auriculares H5 Pro</h3>
+            <p>Sonido envolvente y micrófono con cancelación de ruido.</p>
+            <p class="card__precio">$ 68.500</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/monitor.svg" alt="Monitor de 27 pulgadas" width="300" height="200">
+          <div class="card__cuerpo">
+            <h3>Monitor 27" QHD</h3>
+            <p>Panel IPS a 165 Hz, ideal para trabajo y juegos.</p>
+            <p class="card__precio">$ 390.000</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Reseñas (Grid) -->
+    <section class="resenas" id="resenas" aria-labelledby="titulo-resenas">
+      <h2 id="titulo-resenas">Reseñas</h2>
+      <p class="seccion__intro">Lo que dicen quienes ya compraron.</p>
+
+      <div class="resenas__grid">
+        <article class="resena">
+          <p class="resena__estrellas" aria-label="5 de 5 estrellas">★★★★★</p>
+          <p>"El teclado llegó en dos días y es buenísimo. La atención por WhatsApp, excelente."</p>
+          <h3>Martina G.</h3>
+        </article>
+
+        <article class="resena">
+          <p class="resena__estrellas" aria-label="4 de 5 estrellas">★★★★☆</p>
+          <p>"El mouse es muy cómodo para jornadas largas. Le pondría un cable de repuesto."</p>
+          <h3>Julián R.</h3>
+        </article>
+
+        <article class="resena">
+          <p class="resena__estrellas" aria-label="5 de 5 estrellas">★★★★★</p>
+          <p>"Compré el monitor para la oficina y cambió por completo mi forma de trabajar."</p>
+          <h3>Sofía L.</h3>
+        </article>
+
+        <article class="resena">
+          <p class="resena__estrellas" aria-label="5 de 5 estrellas">★★★★★</p>
+          <p>"Los auriculares se escuchan muy bien en las reuniones. Muy recomendables."</p>
+          <h3>Diego P.</h3>
+        </article>
+
+        <article class="resena">
+          <p class="resena__estrellas" aria-label="4 de 5 estrellas">★★★★☆</p>
+          <p>"Buenos precios y me asesoraron bien para armar el setup completo."</p>
+          <h3>Camila T.</h3>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contacto (Formspree + Media Queries) -->
+    <section class="contacto" id="contacto" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">Contacto</h2>
+      <p class="seccion__intro">¿Tenés dudas sobre algún producto? Escribinos.</p>
+
+      <div class="contacto__contenedor">
+        <!-- Reemplazar TU_ID_FORMSPREE por el ID de tu formulario en formspree.io -->
+        <form class="formulario" action="https://formspree.io/f/maeqlned" method="POST">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu consulta" required></textarea>
+
+          <button type="submit" class="boton">Enviar mensaje</button>
+        </form>
+
+        <div class="contacto__mapa">
+          <h3>Dónde estamos</h3>
+          <iframe
+            src="https://www.google.com/maps?q=Obelisco,+Buenos+Aires&output=embed"
+            title="Mapa con la ubicación del local de NexoTech"
+            loading="lazy"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; 2026 NexoTech. Proyecto educativo para Talento Tech - Front-End JS.</p>
+    <ul class="footer__redes">
+      <li><a href="#inicio">Volver arriba</a></li>
+      <li><a title="Pagina principal de Instagram" href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a title="Pagina principal de GitHub" href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
